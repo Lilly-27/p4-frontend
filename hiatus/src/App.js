@@ -3,8 +3,9 @@ import LandingPage from './Pages/LandingPage/LandingPage';
 import LogIn from './Pages/LogIn/LogIn';
 import SignUp from './Pages/SignUp/SignUp';
 import Clinics from './Pages/Clinics/Clinics';
-import StoriesViewPage from './Pages/StoriesViewPage/StoriesViewPage';
+import Stories from './Pages/Stories/Stories';
 import Account from './Pages/MyAccount/Account';
+import About from './Pages/About/About'
 import './App.css';
 
 function App() {
@@ -17,9 +18,8 @@ function App() {
         <Route exact path='/login' element={<LogIn/>}></Route>
         <Route exact path='/signup' element={<SignUp/>}></Route>
         <Route exact path='/myaccount' element ={<Account/>}></Route>
-
         <Route exact path='/clinics' element ={<Clinics/>}></Route>
-        <Route exact path='/stories' element ={<StoriesViewPage/>}></Route>
+        
        
 
 
