@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const StatePage = () => {
+const StatePage = ({statename}) => {
+
+    const [stateData, setStateData] = useState()
+
+    useEffect(() => {
+        let endpoint = `${process.env.REACT_APP_API_ENDPOINT}/statepolicy/${statename}`
+        fetch(endpoint)
+        .then(res => setStateData(res))
+        .catch(console.error)
+    },{})
+
   return (
     <div className="state-page-main-container.css">
         <div className='text-container'>
