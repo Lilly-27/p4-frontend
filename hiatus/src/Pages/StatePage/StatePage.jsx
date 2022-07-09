@@ -3,6 +3,7 @@ import GestationalLimits from '../../Components/GestationalLimits/GestationalLim
 import WaitingPeriod from '../../Components/WaitingPeriods/WaitingPeriod'
 import LawsForMinors from '../../Components/LawsForMinors/LawsForMinors'
 import InsuracePolicies from '../../Components/Insurance/InsuracePolicies'
+import MapWrapper from '../../Components/Map/MapWrapper'
 
 const StatePage = ({statename}) => {
 
@@ -11,12 +12,13 @@ const StatePage = ({statename}) => {
 
     useEffect(() => {
         let endpoint = `${process.env.REACT_APP_API_ENDPOINT}statepolicy/${statename}`
-        console.log(endpoint)
         fetch(endpoint)
         .then(res => res.json())
         .then(data => setStateData(data))
         .catch(console.error)
     },[])
+
+
 
   return (
     <div className="state-page-main-container.css">
@@ -53,7 +55,7 @@ const StatePage = ({statename}) => {
             }
         </div>
         <div className='component-container'>
-            {/* TODOgoogle maps */}
+            <MapWrapper clinics={"hello"}></MapWrapper>
             {/* TODO list of clinics */}
             {/* list of organizations */}
         </div>

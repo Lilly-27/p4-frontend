@@ -6,19 +6,22 @@ import {
     InfoWindow,
 } from '@react-google-maps/api'
 
-const MapWrapper = ({ mapCenter, clinics}) => {
+const MapWrapper = ({ clinics }) => {
   const [selected, setSelected] = useState({})
 
   const onSelect = (item) => {
     console.log(item)
   }
 
-  mapCenter = {mapCenter}
-  
+  const centerAS = {
+    lat: 44.409286,
+    lng: -68.247501,
+}
+
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-        <GoogleMap mapContainerClassName='map-class' zoom={11} center={mapCenter}>
-            
+        <GoogleMap mapContainerClassName='map-class' zoom={11} center={centerAS}>
+
         </GoogleMap>
     </LoadScript>
   )
