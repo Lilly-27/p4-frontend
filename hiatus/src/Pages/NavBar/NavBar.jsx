@@ -23,16 +23,6 @@ function NavBar() {
           <Nav.Link href="#Resources">Resource Hub</Nav.Link>
           <Nav.Link href="#Donate">Donate</Nav.Link>
         </Nav>
-
-        {/* <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-success">Search</Button>
-      </Form> */}
       </Navbar.Collapse>
       </Container>
     </Navbar>
