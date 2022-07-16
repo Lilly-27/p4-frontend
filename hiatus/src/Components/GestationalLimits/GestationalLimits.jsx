@@ -8,7 +8,7 @@ const GestationalLimits = ({ limits, name }) => {
     const policies = {}
 
       //Does zero mean it is banned or it is not banned
-    if(limits.banned_after_weeks_since_LMP > 0){
+    if(limits.banned_after_weeks_since_LMP !== null){
       if(limits.banned_after_weeks_since_LMP === 28){
         policies.isBanned = 'Abortions are banned in the third trimester'
       } else if(limits.banned_after_weeks_since_LMP === 99){
@@ -60,7 +60,6 @@ const GestationalLimits = ({ limits, name }) => {
 
   useEffect(() => {
     const filteredPolicies = policyFilter()
-    console.log(filteredPolicies)
     setStatePolicies(filteredPolicies)
   },[])
 
