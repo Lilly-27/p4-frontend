@@ -20,14 +20,14 @@ const policyFilter = () => {
   }
 
   if(laws.parental_notification_required){
-    policy.parentalNotification="Parental notification is required before of the minor's decision to have an abortion."
+    policy.parentalNotification="Parent(s) must be told beforehand of the minor's decision to have an abortion"
   } else {
-    policy.parentalNotification="No parental notification is required"
+    policy.parentalNotification="Parent(s) do not need to be told beforehand of the minor's decision to have an abortion"
   }
 
   if(laws.parents_required){
     if(laws.parents_required === 1){
-      policy.parentRequired = "One parent or guardian must be notified"
+      policy.parentRequired = "One parent or guardian must be "
     } else {
       policy.parentRequired = "Both parents or guardian must be notified"
     }
@@ -58,30 +58,6 @@ useEffect(() => {
   return (
     <div className='laws-for-minors'>
         <h2>Laws and Polices Pertaining to Minors</h2>
-        {/* {laws.below_age
-        ? <p>Below age field is present {laws.below_age}</p>
-        : <p>No age limits</p>
-        }
-        {laws.parental_consent_required
-        ? <p>Parental consent is required</p>
-        : <p>Parental consent is not required</p>
-        }
-        {laws.parental_notification_required
-        ? <p>Parental notification is required</p>
-        : <p>Parental notification is not required</p>
-        }
-        {laws.parents_required
-        ? <p>NEED MORE INFO</p>
-        : <p>Parents are not required</p>
-        }
-        {laws.judicial_bypass_available
-        ? <p>Judicial bypass available</p>
-        : <p>Judicial bypass not available</p>
-        }
-        {laws.allows_minor_to_consent
-        ? <p>Allows minors to consent</p>
-        : <p>Does not all minors to consent</p>
-        } */}
         {policies
         ?
         <>

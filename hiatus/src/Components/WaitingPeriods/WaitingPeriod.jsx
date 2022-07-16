@@ -22,7 +22,7 @@ const WaitingPeriod = ({waiting, statename}) => {
     }
 
     if(waiting.exception_health){
-      policy.healthException = `Counceling requirement can be waived under certain conditions: ${waiting.exception_health}`
+      policy.healthException = `Counseling requirement can be waived under certain conditions: ${waiting.exception_health}`
     } else {
       policy.healthException = 'No exceptions for counceling'
     }
