@@ -94,7 +94,6 @@ const InsuracePolicies = ({insurance}) => {
 
   return (
     <div className='insurance_policy'>
-        <h2>Insurance Coverage Policies</h2>
         
         {
           policies
