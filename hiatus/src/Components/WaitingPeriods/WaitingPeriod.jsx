@@ -1,22 +1,59 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-const WaitingPeriod = ({waiting}) => {
+const WaitingPeriod = ({waiting, statename}) => {
+  const [policies, setPolicies] = useState()
+  
+  const policyFilter = () => {
+    const policy = {}
+
+    if(waiting.waiting_period_hours){
+      policy.waitingPeriod=`You must wait ${waiting.waiting_period_hours} between receiving state mandated abortion counseling and obtaining an abortion.`
+    } else {
+      policy.waitingPeriod='No waiting period is in effect'
+    }
+
+    if(waiting.counseling_visits === 1){
+      policy.counseling = `Counseling is required by the ${statename}`
+    }
+    else if(waiting.counseling_visits === 2){
+      policy.counseling = 'Abortion counseling or ultrasound must be obtained at the facility before the waiting period begins'
+    } else {
+      policy.counseling = 'Counseling is not required'
+    }
+
+    if(waiting.exception_health){
+      policy.healthException = `Counseling requirement can be waived under certain conditions: ${waiting.exception_health}`
+    } else {
+      policy.healthException = 'No exceptions for counceling'
+    }
+
+    if(waiting.waiting_period_notes){
+      policy.notes = waiting.waiting_period_notes
+    }
+
+
+    return policy
+  }
+
+  useEffect(() => {
+    const filteredPolicies = policyFilter()
+    setPolicies(filteredPolicies)
+  }, [])
+
   return (
     <div className='waiting-period'>
         <h2>Waiting Periods</h2>
-        {waiting.waiting_period_hours
-        ? <p>You must wait {waiting.waiting_period_hours} hours        ***need better info on this not final***</p>
-        :<p>No data on waiting period hours</p>
+        {
+          policies
+          ?
+          <>
+          <p>{policies.waitingPeriod}<br/>Note that all states waive mandatory wainting period requirements in a medicial emergency</p>
+          <p>{policies.counseling}</p>
+          <p>{policies.healthException}</p>
+          <p>Additional notes pertaining to waiting periods: {policies.notes}</p>
+          </>
+          :<p>No information on waiting periods for {statename}</p> 
         }
-        {waiting.counseling_visits
-        ?<p>You must attend {waiting.counseling_visits} counseling visits</p>
-        : <p>No data on counseling_visits</p>  
-        }
-        {waiting.exception_health
-        ?<p>There is an exception for health: {waiting.exception_health}</p>
-        :<p>No Exceptions for health</p>
-        }
-        {waiting.waiting_period_notes && <p>Additional Notes: {waiting.waiting_period_notes}</p>}
         
     </div>
   )

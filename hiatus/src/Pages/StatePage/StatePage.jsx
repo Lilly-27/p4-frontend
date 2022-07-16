@@ -4,6 +4,7 @@ import WaitingPeriod from '../../Components/WaitingPeriods/WaitingPeriod'
 import LawsForMinors from '../../Components/LawsForMinors/LawsForMinors'
 import InsuracePolicies from '../../Components/Insurance/InsuracePolicies'
 import MapWrapper from '../../Components/Map/MapWrapper'
+import './StatePage.css'
 
 const StatePage = ({statename}) => {
 
@@ -11,7 +12,8 @@ const StatePage = ({statename}) => {
 
 
     useEffect(() => {
-        let endpoint = `${process.env.REACT_APP_API_ENDPOINT}statepolicy/${statename}`
+        // let endpoint = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename}`
+        let endpoint = 'http://localhost:4000/statepolicy/62c77a93aa69cc46ad4f9242'
         fetch(endpoint)
         .then(res => res.json())
         .then(data => setStateData(data))

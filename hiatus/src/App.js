@@ -20,7 +20,7 @@ function App() {
 
         {/* routes to separate pages */}
         <Route exact path='/clinics' element ={<Clinics/>}></Route>
-        <Route exact path='/states' element ={<StatePage/>}></Route>
+        <Route exact path='/states' element ={<StatePage statename={'Johgn'}/>}></Route>
         
        
       </Routes>
