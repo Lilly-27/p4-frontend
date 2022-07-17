@@ -3,7 +3,7 @@ import GestationalLimits from '../../Components/GestationalLimits/GestationalLim
 import WaitingPeriod from '../../Components/WaitingPeriods/WaitingPeriod'
 import LawsForMinors from '../../Components/LawsForMinors/LawsForMinors'
 import InsuracePolicies from '../../Components/Insurance/InsuracePolicies'
-import MapWrapper from '../../Components/Map/MapWrapper'
+import MapWrapper from '../../Components/MapWrapper/MapWrapper'
 
 const StatePage = ({statename}) => {
 
