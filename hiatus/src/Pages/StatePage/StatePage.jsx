@@ -16,12 +16,14 @@ const StatePage = ({statename}) => {
 
 
     useEffect(() => {
-        // let endpoint = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename}`
-        let endpoint = 'http://localhost:4000/statepolicy/Alabama'
+        let endpoint = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename}`
+        // let endpoint = 'http://localhost:4000/statepolicy/Alabama'
         fetch(endpoint)
         .then(res => res.json())
-        .then(data => setStateData(data))
-        .catch(console.error)
+        .then(data => {
+			setStateData(data)
+		})
+		.catch(console.error)
     },[])
 
 
@@ -31,7 +33,6 @@ const StatePage = ({statename}) => {
 			<div className="text-container">
 				{stateData ? (
 					<>
-						{console.log(stateData)}
 						<h1>{stateData.state}</h1>
 						{/*This section will be a giant conditional to check to see if
                     data members are withing the data. Checks for gestational limits, waiting periods, insurance coverages
@@ -40,9 +41,9 @@ const StatePage = ({statename}) => {
                     due to the number of lines however for now we will work in here
                 */}
 
-						<Accordion defaultActiveKey={0}>
+						<Accordion defaultActiveKey="0">
 							<AccordionItem eventKey="0">
-								<AccordionHeader>Gestational Limits</AccordionHeader>
+								<AccordionHeader><h3>Gestational Limits</h3></AccordionHeader>
 								<AccordionBody>
 									{stateData["gestational_limits"] ? (
 										<GestationalLimits
@@ -58,7 +59,7 @@ const StatePage = ({statename}) => {
 								</AccordionBody>
 							</AccordionItem>
                             <AccordionItem eventKey="1">
-                                <AccordionHeader>Waiting Period</AccordionHeader>
+                                <AccordionHeader><h3>Waiting Period</h3></AccordionHeader>
                                 <AccordionBody>
                                 {stateData.waiting_periods ? (
 							<WaitingPeriod waiting={stateData.waiting_periods} />
@@ -68,7 +69,7 @@ const StatePage = ({statename}) => {
                                 </AccordionBody>
                             </AccordionItem>
                             <AccordionItem eventKey="2">
-                                <AccordionHeader>Laws Pertaining To Minors</AccordionHeader>
+                                <AccordionHeader><h3>Laws Pertaining To Minors</h3></AccordionHeader>
                                 <AccordionBody>{stateData["minors"] ? (
 							<LawsForMinors laws={stateData.minors} />
 						) : (
@@ -76,7 +77,7 @@ const StatePage = ({statename}) => {
 						)}</AccordionBody>
                             </AccordionItem>
                             <AccordionItem eventKey="3">
-                                <AccordionHeader>Insurance Coverage</AccordionHeader>
+                                <AccordionHeader><h3>Insurance Coverage</h3></AccordionHeader>
                                 <AccordionBody>
                                 {stateData["insurance_coverage"] ? (
 							<InsuracePolicies insurance={stateData.insurance_coverage} />
@@ -94,7 +95,7 @@ const StatePage = ({statename}) => {
 				)}
 			</div>
 			<div className="component-container">
-				<MapWrapper clinics={"hello"}></MapWrapper>
+				{stateData && <MapWrapper stateName={stateData.state}></MapWrapper>}
 				{/* TODO list of clinics */}
 				{/* list of organizations */}
 			</div>

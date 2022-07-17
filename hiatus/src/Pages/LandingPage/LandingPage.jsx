@@ -11,14 +11,13 @@ import Footer from '../Footer/Footer'
 const LandingPage = () => {
   return (
     <div>
-      <NavBar />
+      
       <About />
       <Map />
       <Stories />
       <Resources />
       <Donate />
-      <Footer />
-
+      
     </div>
   )
 }
