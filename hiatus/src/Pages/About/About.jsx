@@ -84,8 +84,8 @@ function About() {
       
 
       <div className="About">
-        <div>
-          <img src="https://i.imgur.com/fZmqEvT.png" alt="women protesting for rights" />
+        <div id="about-one">
+          <img src="https://i.imgur.com/fZmqEvT.png" alt="women protesting for rights" id="protest"/>
         </div>
 
         <div id="about-two">
