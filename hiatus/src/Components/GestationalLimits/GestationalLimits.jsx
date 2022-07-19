@@ -66,7 +66,6 @@ const GestationalLimits = ({ limits, name }) => {
   
   return (
     <div className='gestational-limits'>
-        <h2>Gestation Limits</h2>
         {statePolicies
         ?<>
         <p>{statePolicies.isBanned} in {name}</p>

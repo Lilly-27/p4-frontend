@@ -57,7 +57,6 @@ useEffect(() => {
 
   return (
     <div className='laws-for-minors'>
-        <h2>Laws and Polices Pertaining to Minors</h2>
         {policies
         ?
         <>

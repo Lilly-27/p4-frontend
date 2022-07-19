@@ -42,7 +42,6 @@ const WaitingPeriod = ({waiting, statename}) => {
 
   return (
     <div className='waiting-period'>
-        <h2>Waiting Periods</h2>
         {
           policies
           ?
