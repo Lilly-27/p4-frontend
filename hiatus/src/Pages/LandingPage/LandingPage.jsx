@@ -13,6 +13,7 @@ const LandingPage = () => {
   return (
     <div id="landing-page">
       <About />
+      <NavBar />
       <InteractiveMap />
       <Stories />
       <Resources />
