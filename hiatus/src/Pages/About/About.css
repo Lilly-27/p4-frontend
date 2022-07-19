@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+#Carousel-container {
+    width:95%;
+    margin-left:2%;
+};
+
+.carousel-inner > .item {
+    position: relative;
+    max-height: 600px;
+}
+.carousel-caption {
+    position: absolute;
+    top: 35%;
+    transform: translateX(35%);
+    font-family: 'Anton', sans-serif;
+    
+}
+
+#text {
+    background-color:rgb(143, 184, 143);
+    opacity: 90%;
+    padding: .5%;
+    text-decoration: none;
+    border-radius: 10%;
+    color: white
+}
+
+.About {
+    display:flex;
+    margin: 3%;
+}
+
+#protest{
+    width:80%
+}
+
+
+#about-intro {
+    font-family: 'Roboto', sans-serif;
+}
