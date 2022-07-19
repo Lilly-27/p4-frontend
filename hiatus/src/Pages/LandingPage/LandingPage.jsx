@@ -12,8 +12,8 @@ import Carousel from 'react-bootstrap/Carousel';
 const LandingPage = () => {
   return (
     <div id="landing-page">
-      <About />
       <NavBar />
+      <About />
       <InteractiveMap />
       <Stories />
       <Resources />

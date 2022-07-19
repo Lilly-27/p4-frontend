@@ -10,6 +10,7 @@ import AccordionItem from 'react-bootstrap/esm/AccordionItem'
 import AccordionHeader from 'react-bootstrap/esm/AccordionHeader'
 import AccordionBody from 'react-bootstrap/esm/AccordionBody'
 import axios from 'axios'
+
 const StatePage = ({statename}) => {
     const [stateData, setStateData] = useState([])
     const [clinicData, setClinicData] = useState([])
