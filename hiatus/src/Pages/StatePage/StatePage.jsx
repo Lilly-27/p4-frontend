@@ -9,23 +9,34 @@ import './StatePage.css'
 import AccordionItem from 'react-bootstrap/esm/AccordionItem'
 import AccordionHeader from 'react-bootstrap/esm/AccordionHeader'
 import AccordionBody from 'react-bootstrap/esm/AccordionBody'
+import axios from 'axios'
 
 const StatePage = ({statename}) => {
 
-    const [stateData, setStateData] = useState()
+    const [stateData, setStateData] = useState([])
+	const [clinicData, setClinicData] = useState([])
 
 
-    useEffect(() => {
-        let endpoint = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename}`
-        // let endpoint = 'http://localhost:4000/statepolicy/Alabama'
-        fetch(endpoint)
-        .then(res => res.json())
-        .then(data => {
-			setStateData(data)
-		})
-		.catch(console.error)
-    },[])
+    const fetchAll = () => {
+		const stateURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename}`
+		const clinicURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}clinics/state/${statename}`
+		const getStateData = axios.get(stateURL)
+		const getClinicData = axios.get(clinicURL)
+		axios.all([getStateData, getClinicData])
+		.then(
+			axios.spread((...allData) => {
+				const stateData = allData[0].data
+				const clinicData = allData[1].data
+				setStateData(stateData)
+				setClinicData(clinicData)
+			})
+		)
+	}
 
+
+	useEffect(() => {
+		fetchAll()
+	},[])
 
 
   return (
@@ -95,7 +106,7 @@ const StatePage = ({statename}) => {
 				)}
 			</div>
 			<div className="component-container">
-				{stateData && <MapWrapper stateName={stateData.state}></MapWrapper>}
+				{clinicData && <MapWrapper stateName={stateData.state} clinicData={clinicData}></MapWrapper>}
 				{/* TODO list of clinics */}
 				{/* list of organizations */}
 			</div>

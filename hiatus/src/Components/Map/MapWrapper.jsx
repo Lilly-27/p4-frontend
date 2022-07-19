@@ -6,8 +6,9 @@ import {
     InfoWindow,
     MarkerClusterer,
 } from '@react-google-maps/api'
+import markerIcon  from '../../assets/welfareroom.png'
 
-const MapWrapper = ({ stateName }) => {
+const MapWrapper = ({ stateName, clinicData }) => {
 
   //Data structure will zooms and center points for all states
   const stateMapData = {
@@ -16,9 +17,15 @@ const MapWrapper = ({ stateName }) => {
       zoom: 7.46
     }
   }
-  const [selected, setSelected] = useState({})
-  const [clinic, setClinics] = useState([])
 
+
+  const latLongs = clinicData.map((clinic) => {
+    return {
+      id: clinic.address.state,
+      name: clinic.name,
+      location: {lat: Number(clinic.latlong.latitude), lng: Number(clinic.latlong.longitude)}
+    }
+  })
   const onSelect = (item) => {
     console.log(item)
   }
@@ -28,35 +35,43 @@ const MapWrapper = ({ stateName }) => {
     width: '100%',
   }
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_ENDPOINT_PROD}clinics/state/${stateName}`)
-    .then(res => res.json())
-    .then(data => {
-      setClinics(data)
-    })
-    .catch(console.error)
-  },[])
+  const markerLoc = {
+    lat: 40.000231,
+    lon: -89.000231
+  }
+
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-        <GoogleMap mapContainerClassName='map-class' zoom={stateMapData[stateName].zoom} center={stateMapData[stateName].state_center} mapContainerStyle={mapStyles}>
-          {clinic && 
+        <GoogleMap mapContainerClassName='map-class' zoom={7.46} center={{lat: 40.0000000, lng: -89.0000000}} mapContainerStyle={mapStyles}>
+          {/* {clinicData && 
           <>
-          P
+          {console.log(clinicData)}
             {
-            clinic.map((item, key) => {
+            clinicData.map((item, key) => {
               console.log(item.latlong, "item",)
             return(
                 <Marker
                 key={key}
                 postition={item.latlong}
-                onClick={()=> onSelect(item)}>
+                onClick={()=> onSelect(item)}
+                icon={markerIcon}>
 
                 </Marker>
               )
             })}
           </>
-          }
+          } */}
+          {latLongs.map((item, key) => {
+          return (
+            <Marker
+              key={key}
+              position={item.location}
+              onClick={() => onSelect(item)}
+              // icon = 'https://cdn1.iconfinder.com/data/icons/map-objects/154/map-object-tree-park-forest-point-place-512.png'
+            ></Marker>
+          );
+        })}
         </GoogleMap>
     </LoadScript>
   )
