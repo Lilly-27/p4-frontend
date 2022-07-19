@@ -37,12 +37,6 @@ const MapWrapper = ({ stateName, clinicData }) => {
     width: '100%',
   }
 
-  const markerLoc = {
-    lat: 40.000231,
-    lon: -89.000231
-  }
-
-
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <GoogleMap mapContainerClassName='map-class' zoom={7.46} center={{lat: 40.0000000, lng: -89.0000000}} mapContainerStyle={mapStyles}>
