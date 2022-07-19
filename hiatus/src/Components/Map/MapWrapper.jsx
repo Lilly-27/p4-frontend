@@ -10,7 +10,9 @@ import markerIcon  from '../../assets/welfareroom.png'
 
 const MapWrapper = ({ stateName, clinicData }) => {
 
-  //Data structure will zooms and center points for all states
+  const [center, setCenter] = useState()
+
+  //Must pass center and zoom data into component from rest call
   const stateMapData = {
     Illinois: {
       state_center: {lat: 40.0000000, lng: -89.0000000},
@@ -44,24 +46,6 @@ const MapWrapper = ({ stateName, clinicData }) => {
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <GoogleMap mapContainerClassName='map-class' zoom={7.46} center={{lat: 40.0000000, lng: -89.0000000}} mapContainerStyle={mapStyles}>
-          {/* {clinicData && 
-          <>
-          {console.log(clinicData)}
-            {
-            clinicData.map((item, key) => {
-              console.log(item.latlong, "item",)
-            return(
-                <Marker
-                key={key}
-                postition={item.latlong}
-                onClick={()=> onSelect(item)}
-                icon={markerIcon}>
-
-                </Marker>
-              )
-            })}
-          </>
-          } */}
           {latLongs.map((item, key) => {
           return (
             <Marker
