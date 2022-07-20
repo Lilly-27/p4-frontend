@@ -12,6 +12,7 @@ const rawHTML =
 </head>
 <body>
 <h1>Access to Abortion by State</h1>
+<p>Hover over each state to see where abortion care is accessible legally and safely.</p>
 <div id="map"></div>
 </body>`
 
@@ -20,7 +21,9 @@ function InteractiveMap() {
         console.log(e)
     }
   return (
-     <div id="map" onClick={onClick}> {Parser().parse(rawHTML)}</div>
+     <div id="map" onClick={onClick}> 
+     {Parser().parse(rawHTML)}
+     </div>
   )      
 }
 

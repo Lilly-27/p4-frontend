@@ -1,7 +1,7 @@
 var simplemaps_usmap_mapdata={
   main_settings: {
    //General settings
-    width: "responsive", //'700' or 'responsive'
+    width:'responsive',
     background_color: "#FFFFFF",
     background_transparent: "yes",
     border_color: "#ffffff",
@@ -32,7 +32,7 @@ var simplemaps_usmap_mapdata={
     all_locations_hidden: "no",
     
     //Label defaults
-    label_color: "#d5ddec",
+    label_color: "#FFFFFF",
     label_hover_color: "#d5ddec",
     label_size: 22,
     label_font: "Arial",
@@ -336,18 +336,7 @@ var simplemaps_usmap_mapdata={
       hide: "yes"
     }
   },
-  locations: {
-    "0": {
-      name: "New York City",
-      lat: 40.7143528,
-      lng: -74.0059731
-    },
-    "1": {
-      name: "Anchorage",
-      lat: 61.2180556,
-      lng: -149.9002778
-    }
-  },
+ 
   labels: {
     NH: {
       parent_id: "NH",

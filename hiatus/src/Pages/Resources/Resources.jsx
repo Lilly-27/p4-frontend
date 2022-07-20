@@ -1,4 +1,5 @@
 import React from 'react'
+import './Resources.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { CardGroup } from 'react-bootstrap';
@@ -6,7 +7,8 @@ import { CardGroup } from 'react-bootstrap';
 function Resources() {
   return (
     <>
-    <div id="card-container">
+    <div id="Resources">
+      <h2> Resource Hub</h2>
     <CardGroup>
       <Card>
         <Card.Img variant="top" src="https://i.imgur.com/l6lXnyp.jpg" />
@@ -16,7 +18,7 @@ function Resources() {
             Planned Parenthood is an excellent resource to learn more about the two types of abortions: Medical Abortion and Surgical Abortion.
           </Card.Text>
           <a href="https://www.plannedparenthood.org/learn/ask-experts/what-are-the-different-types-of-abortion" >
-          <Button variant="primary">More Info</Button>
+          <Button id="btn">More Info</Button>
           </a>
         </Card.Body>
         
@@ -29,21 +31,20 @@ function Resources() {
           The Center for Reproductive Rights shared seven actions you can take to support women and people who are able to concieve. 
           </Card.Text>
           <a href="https://reproductiverights.org/seven-things-you-can-do-right-now-advance-abortion-rights/" >
-          <Button variant="primary">More Info</Button>
+          <Button id="btn">More Info</Button>
           </a>
         </Card.Body>
       </Card>
 
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src="https://i.imgur.com/CJi2vQZ.jpg" />
         <Card.Body>
-          <Card.Title></Card.Title>
+          <Card.Title>Take care of your mental health, Queen! </Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+            Seeking counseling services and therapy online is made easy with Cerebral. Read their blog post on how you can find a therapist near you.
           </Card.Text>
-          <a href="https://www.abortionfinder.org/abortion-types/pill" >
-          <Button variant="primary">More Info</Button>
+          <a href="https://cerebral.com/blog/how-do-i-find-a-therapist-near-me" >
+          <Button id="btn">More Info</Button>
           </a>
         </Card.Body>
       </Card>
