@@ -83,16 +83,18 @@ function About() {
       </div>
       
 
-      <div className="About">
+      <div className="About" id="About">
         <div id="about-one">
           <img src="https://i.imgur.com/fZmqEvT.png" alt="women protesting for rights" id="protest"/>
         </div>
 
         <div id="about-two">
+        <h2 id="title">About Hiatus</h2>
         <p id="about-intro">After SCOTUS overturned Roe v. Wade on June 24, 2022, we knew people with power would do their best to obscure information on abortion services.
           {/* Many of our grandmothers shared their stories pre-Roe, and it was a life full of unnecessary and cruel pain. */}
           In hopes of being of service during this unexpected and dangerous interuption in women's rights, 
-          we -- Martin & I -- decided to create a resource for people seeking abortion care. Below, there is an interactive map that shows you which states are protecting access to abortion services, which states are restricting access, and which states are banning them, according to The New York Times' IG posts.</p>
+          we -- Martin & I -- decided to create a resource for people seeking abortion care. <br /></p>
+        <p id="about-intro">Our interactive map below shows you which states are protecting access to abortion services, which states are restricting access, and which states are banning them, according to The New York Times' IG posts. </p>
         </div>
       
       </div>
