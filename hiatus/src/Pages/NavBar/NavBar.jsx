@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Navbar, Container, Nav} from 'react-bootstrap';
+import { Navbar, Container, Nav, Button} from 'react-bootstrap';
 import './NavBar.css';
 
 function NavBar() {
@@ -26,6 +26,11 @@ function NavBar() {
       </Navbar.Collapse>
       </Container>
     </Navbar>
+    <Link to="/login">
+    <Button className='Login-button' size={"lg"}>
+      Login
+    </Button>
+    </Link>
     </div>
   )
 }

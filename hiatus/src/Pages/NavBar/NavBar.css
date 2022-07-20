@@ -6,3 +6,7 @@ a:active { text-decoration: none; }
 .navbar {
     margin-left: 1%;
 }
+
+.Login-button{
+    margin-right: 3rem;
+}
