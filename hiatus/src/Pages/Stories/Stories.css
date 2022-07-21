@@ -2,3 +2,17 @@
     margin-left: 2%;
     margin-right: 2%;
 }
+
+.btn {
+    font-weight:bold;
+    color:black;
+    background: transparent;
+    border-color: rgb(143, 184, 143);
+}
+
+.btn:hover {
+    transform:scale(1.02);
+    background:rgb(143, 184, 143);
+    border-color: rgb(143, 184, 143);
+    color:white;
+}
