@@ -3,9 +3,16 @@
     margin-right: 2%;
 }
 
-#container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 1050px;
-};
+.btn {
+    font-weight:bold;
+    color:black;
+    background: transparent;
+    border-color: rgb(143, 184, 143);
+}
+
+.btn:hover {
+    transform:scale(1.02);
+    background:rgb(143, 184, 143);
+    border-color: rgb(143, 184, 143);
+    color:white;
+}

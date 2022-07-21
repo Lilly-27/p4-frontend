@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 import './Stories.css';
 
 
@@ -36,7 +37,7 @@ function Stories() {
       <h2>Our Stories Matter</h2>
       <p>Sharing our stories helps us build a sense of community with each other, of acceptance and unity. <br />
         Our hope is for you to read these stories and feel comforted by the fact that you are not alone.</p>
-      <Row xs={1} md={3} xl={8} id="container">
+      <Row xs={2} md={3} id="container">
       {storyData
       ? storyData.map((story, index) => {
           return(
@@ -46,10 +47,10 @@ function Stories() {
                   <Card.Title>{story.title}</Card.Title>
                   {selected === index
                     ? <Card.Text> {story.body}</Card.Text>
-                    :<Card.Text>{story.body.slice(0,500)}</Card.Text>
+                    :<Card.Text>{story.body.slice(0,250)}</Card.Text>
                   }
+                  <Button className="btn" size="sm" onClick={handleButton} data-key={index}>Read More</Button>
                 </Card.Body>
-                  <button onClick={handleButton} data-key={index}>Read More</button>
               </Card>
             </Col>
           )
