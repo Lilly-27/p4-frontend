@@ -34,9 +34,18 @@ function Stories() {
 
   return (
     <div id="Stories">
-      <h2>Our Stories Matter</h2>
-      <p>Sharing our stories helps us build a sense of community with each other, of acceptance and unity. <br />
-        Our hope is for you to read these stories and feel comforted by the fact that you are not alone.</p>
+      <Card id="banner">
+      <Card.Img src="https://i.imgur.com/DJnLxtx.png" alt="women supporting women" />
+      <Card.ImgOverlay>
+        <Card.Text className="caption">
+          <h3>Our Stories Matter</h3><br />
+          <h4>Our hope is for you to read these stories and <br />
+        feel comforted by the fact that you are not alone.</h4>
+        </Card.Text>
+      </Card.ImgOverlay>
+    </Card>
+   
+      
       <Row xs={2} md={3} id="container">
       {storyData
       ? storyData.map((story, index) => {

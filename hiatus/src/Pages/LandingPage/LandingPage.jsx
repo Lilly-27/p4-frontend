@@ -12,9 +12,7 @@ const LandingPage = () => {
       <About />
       <InteractiveMap />
       <Resources />
-      <Donate />
       <Stories />
-      
     </div>
   )
 }
