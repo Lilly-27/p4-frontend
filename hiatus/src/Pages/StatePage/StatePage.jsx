@@ -10,13 +10,18 @@ import AccordionItem from 'react-bootstrap/esm/AccordionItem'
 import AccordionHeader from 'react-bootstrap/esm/AccordionHeader'
 import AccordionBody from 'react-bootstrap/esm/AccordionBody'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
-const StatePage = ({statename}) => {
+const StatePage = () => {
+
+    const statename = useParams() 
+    console.log(statename)
+
     const [stateData, setStateData] = useState([])
     const [clinicData, setClinicData] = useState([])
     const fetchAll = () => {
-        const stateURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename}`
-        const clinicURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}clinics/state/${statename}`
+        const stateURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename.stateName}`
+        const clinicURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}clinics/state/${statename.stateName}`
         const getStateData = axios.get(stateURL)
         const getClinicData = axios.get(clinicURL)
         axios.all([getStateData, getClinicData])
@@ -96,7 +101,7 @@ const StatePage = ({statename}) => {
                 )}
             </div>
             <div className="component-container">
-                {clinicData && <MapWrapper stateName={stateData.state} clinicData={clinicData}></MapWrapper>}
+                {clinicData && <MapWrapper stateName={statename} clinicData={clinicData}></MapWrapper>}
                 {/* TODO list of clinics */}
                 {/* list of organizations */}
             </div>

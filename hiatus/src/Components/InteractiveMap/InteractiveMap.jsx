@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate} from 'react-router-dom';
 import {Parser} from 'html-to-react'
 
 // var map = require('./test.html');
@@ -7,8 +8,7 @@ import {Parser} from 'html-to-react'
 const rawHTML =
 `<head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<script src="mapdata.js"></script>
-<script src="usmap.js"></script>
+
 </head>
 <body>
 <h1>Access to Abortion by State</h1>
@@ -17,9 +17,12 @@ const rawHTML =
 </body>`
 
 function InteractiveMap() {
-    function onClick (e) {
-        console.log(e)
-    }
+  let navigate = useNavigate()
+  
+  function onClick (e) {
+    e.preventDefault()    
+    navigate(`/states/${window.stateNext}`)
+  }
   return (
      <div id="map" onClick={onClick}> 
      {Parser().parse(rawHTML)}

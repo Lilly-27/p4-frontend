@@ -23,7 +23,7 @@ function App() {
 
         {/* routes to separate pages */}
         <Route exact path='/clinics' element ={<Clinics/>}></Route>
-        <Route exact path='/states' element ={<StatePage statename={'Illinois'}/>}></Route>
+        <Route exact path='/states/:stateName' element ={<StatePage/>}></Route>
       </Routes>
       <Footer />
     </div>
