@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Donate from '../Donate/Donate';
+import Card from 'react-bootstrap/Card';
 
 function Footer() {
   return (
     <div id="Footer">
-      <hr/>
+      <Card border="light">
       <h6>Connect with the creators of Hiatus</h6>
       <ul>
         Cecilia Hernandez<br />
@@ -12,6 +14,9 @@ function Footer() {
         Martin Wilson <br />
         Links to LinkedIn and Github
       </ul>
+
+      <Donate />
+      </Card>
       </div>
   )
 }

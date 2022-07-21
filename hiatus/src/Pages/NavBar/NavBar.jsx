@@ -20,8 +20,8 @@ function NavBar() {
           <Nav.Link href="#About">About</Nav.Link>
           <Nav.Link href="#map">Map</Nav.Link>
           <Nav.Link href="#Resources">Resource Hub</Nav.Link>
-          <Nav.Link href="#Donate">Donate</Nav.Link>
           <Nav.Link href="#Stories">Stories</Nav.Link>
+          <Nav.Link href="#Donate">Donate</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       </Container>
