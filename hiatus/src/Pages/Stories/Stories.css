@@ -2,3 +2,10 @@
     margin-left: 2%;
     margin-right: 2%;
 }
+
+#container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1050px;
+};
