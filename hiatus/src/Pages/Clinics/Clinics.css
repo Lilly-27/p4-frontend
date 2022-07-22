@@ -1,0 +1,23 @@
+.clinic-page{
+    text-align: left;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clinic-grid{
+    display: flex;
+    margin: 20px auto;
+    width: 95vw;
+    justify-content: space-around;
+}
+
+.clinic-page div{
+    font-size: 2rem;
+}
+
+.clinic-grid h1{
+    font-size: 2rem;
+}
