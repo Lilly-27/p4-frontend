@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate} from 'react-router-dom';
 import {
     GoogleMap,
     LoadScript,
     Marker,
-    InfoWindow,
-    MarkerClusterer,
 } from '@react-google-maps/api'
 import markerIcon  from '../../assets/welfareroom.png'
+
 const MapWrapper = ({ stateName, clinicData }) => {
   const [center, setCenter] = useState()
+  let navigate = useNavigate()
+  
   //Must pass center and zoom data into component from rest call
   const stateMapData = {
     Illinois: {
@@ -16,20 +18,25 @@ const MapWrapper = ({ stateName, clinicData }) => {
       zoom: 7.46
     }
   }
+
   const latLongs = clinicData.map((clinic) => {
     return {
       id: clinic.address.state,
+      _id: clinic._id,
       name: clinic.name,
       location: {lat: Number(clinic.latlong.latitude), lng: Number(clinic.latlong.longitude)}
     }
   })
+
   const onSelect = (item) => {
-    console.log(item)
+    navigate(`/clinics/${item._id}`)
   }
+
   const mapStyles = {
     height: '100%',
     width: '100%',
   }
+
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <GoogleMap mapContainerClassName='map-class' zoom={7.46} center={{lat: 40.0000000, lng: -89.0000000}} mapContainerStyle={mapStyles}>
@@ -39,6 +46,7 @@ const MapWrapper = ({ stateName, clinicData }) => {
               key={key}
               position={item.location}
               onClick={() => onSelect(item)}
+              icon={markerIcon}
             ></Marker>
           );
         })}
