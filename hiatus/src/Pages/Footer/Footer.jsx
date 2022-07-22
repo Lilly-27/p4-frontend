@@ -18,6 +18,7 @@ function Footer() {
                 height="100"
                 alt="Hiatus" />
                 <p>Working to help people gain access <br />to information on abortion services post-Roe, <br />regardless of where they live.</p>
+            
             </Col>
 
             <Col>
@@ -45,18 +46,9 @@ function Footer() {
                   <li>
                     <a href="https://github.com/TelleDelly">Github</a>
                   </li>
-          
                   
             </Col>
         </Row>
-
-
-
-
-
-        <div className="copyright">
-
-        </div>
 
       </div>
     </div>
