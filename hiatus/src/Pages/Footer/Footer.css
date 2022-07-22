@@ -1,33 +1,33 @@
 #Footer {
-    background-color: rgb(202, 232, 202);
+    background-color: rgb(223, 222, 222);
     padding: 2rem;
+    box-shadow:1rem
 }
 
 #img-dev {
     border-radius: 90%;
-    width:6%;
+    width:33%;
 }
 
 #linkedin-icon{
     border-radius: 30%;
-    width:2%;
+    width:10%;
 }
 
 #github {
     border-radius: 30%;
-    width:2%;
-}
-
-.footer-container{
-    border: 1px solid black;
-    margin: 1rem;
-    padding: 2rem 2rem;
-    text-align: center;
+    width:10%;
 }
 
 #dev{
-    display:inline-block;
-  border: 1px solid red;
-  padding: 1rem 1rem;
-  vertical-align: middle;
+    list-style-type: none;
+    padding:1rem;
+    padding-left:5rem;
+    margin:0;
+    text-align: left;
+}
+
+#brief{
+    margin:0;
+    text-align: left;
 }
