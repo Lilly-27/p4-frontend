@@ -5,11 +5,14 @@ import SignUp from './Pages/SignUp/SignUp';
 import Clinics from './Pages/Clinics/Clinics';
 import Account from './Pages/MyAccount/Account';
 import StatePage from './Pages/StatePage/StatePage';
+import NavBar from './Pages/NavBar/NavBar';
+import Footer from './Pages/Footer/Footer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Routes>
         <Route exact path='/' element={<LandingPage/>}></Route>
 
@@ -19,11 +22,10 @@ function App() {
         <Route exact path='/myaccount' element ={<Account/>}></Route>
 
         {/* routes to separate pages */}
-        <Route exact path='/clinics' element ={<Clinics/>}></Route>
-        <Route exact path='/states' element ={<StatePage/>}></Route>
-        
-       
+        <Route exact path='/clinics/:clinicID' element ={<Clinics/>}></Route>
+        <Route exact path='/states/:stateName' element ={<StatePage/>}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

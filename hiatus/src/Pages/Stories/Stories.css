@@ -1,0 +1,35 @@
+#Stories{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 5rem;
+}
+
+#banner {
+    margin-bottom:2rem;
+    margin-top:3rem;
+}
+
+.caption {
+    position: relative;
+    max-height: 600px;
+    position: absolute;
+    top: 35%;
+    transform: translateX(20%);
+    color: white;
+    font-weight: bolder;
+}
+
+
+.btn {
+    font-weight:bold;
+    color:white;
+    background:rgb(143, 184, 143);
+    border-color: rgb(143, 184, 143);
+}
+
+.btn:hover {
+    transform:scale(1.02);
+    background: transparent;
+    border-color: rgb(143, 184, 143);
+    color:black;
+}

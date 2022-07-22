@@ -8,7 +8,7 @@ function NavBar() {
     <div className="navbar">
       <Navbar expand="lg">
       <Container>
-      <Navbar.Brand href="#"><img 
+      <Navbar.Brand href="/"><img 
         src="https://i.imgur.com/QFdw6lI.png" 
         width="60" 
         height="60"
@@ -18,9 +18,9 @@ function NavBar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href="#About">About</Nav.Link>
-          <Nav.Link href="#Map">Map</Nav.Link>
-          <Nav.Link href="#Stories">Stories</Nav.Link>
+          <Nav.Link href="#map">Map</Nav.Link>
           <Nav.Link href="#Resources">Resource Hub</Nav.Link>
+          <Nav.Link href="#Stories">Stories</Nav.Link>
           <Nav.Link href="#Donate">Donate</Nav.Link>
         </Nav>
       </Navbar.Collapse>

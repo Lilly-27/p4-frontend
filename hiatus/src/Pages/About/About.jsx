@@ -35,21 +35,7 @@ function About() {
         <h3><span>Information is Power <br />
           Stay informed during <br/>
           this Hiatus</span></h3>
-          <a href="#Map"><span id="text">Map</span></a>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://i.imgur.com/uX8s3yb.png"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-        <h3><span>Our Stories Matter <br />
-          Feel Empowered to <br/>
-          Share Your Story</span></h3>
-          <a href="#Stories"><span id="text">Stories</span></a>
+          <a href="#map"><span id="text">Map</span></a>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -70,6 +56,20 @@ function About() {
       <Carousel.Item>
         <img
           className="d-block w-100"
+          src="https://i.imgur.com/uX8s3yb.png"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+        <h3><span>Our Stories Matter <br />
+          Feel Empowered to <br/>
+          Share Your Story</span></h3>
+          <a href="#Stories"><span id="text">Stories</span></a>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
           src="https://i.imgur.com/LKYckK7.png"
           alt="Fifth slide"
         />
@@ -83,16 +83,19 @@ function About() {
       </div>
       
 
-      <div className="About">
-        <div>
-          <img src="https://i.imgur.com/fZmqEvT.png" alt="women protesting for rights" />
+      <div className="About" id="About">
+        <div id="about-one">
+          <img src="https://i.imgur.com/fZmqEvT.png" alt="women protesting for rights" id="protest"/>
         </div>
 
         <div id="about-two">
+        <h2 id="title">About Hiatus</h2>
         <p id="about-intro">After SCOTUS overturned Roe v. Wade on June 24, 2022, we knew people with power would do their best to obscure information on abortion services.
           {/* Many of our grandmothers shared their stories pre-Roe, and it was a life full of unnecessary and cruel pain. */}
           In hopes of being of service during this unexpected and dangerous interuption in women's rights, 
-          we -- Martin & I -- decided to create a resource for people seeking abortion care. Below, there is an interactive map that shows you which states are protecting access to abortion services, which states are restricting access, and which states are banning them, according to The New York Times' IG posts.</p>
+          we -- Martin & I -- decided to create a resource for people seeking abortion care. <br /></p>
+        <p id="about-intro">Our interactive map below shows you which states are protecting access to abortion services according to The New York Times' IG posts. Once you click on Illinois, you'll be able to see some clinics that are open and servicing people.
+        For now, Illinois is the only state with clinic data. We're working on partnering with more national organizations to help us expand. </p>
         </div>
       
       </div>

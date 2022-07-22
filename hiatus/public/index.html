@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <script src="mapdata.js">console.log("loading mapdata")</script>
+    <script src="usmap.js"></script>
+    <script></script>
+    <script type="text/javascript"> 
+        stateNext = 1
+         simplemaps_usmap.hooks.click_state = function(id){
+          stateNext = simplemaps_usmap_mapdata.state_specific[id].name
+         }
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta

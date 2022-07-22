@@ -1,0 +1,12 @@
+/* div{
+background: teal;
+} */
+
+.state-page-main-container{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 80vh;
+}

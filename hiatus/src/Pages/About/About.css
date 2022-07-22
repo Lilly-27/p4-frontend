@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Handlee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-#Carousel-container {
+/* #Carousel-container {
     width:95%;
     margin-left:2%;
-};
+}; */
 
 .carousel-inner > .item {
     position: relative;
@@ -14,7 +11,6 @@
     position: absolute;
     top: 35%;
     transform: translateX(35%);
-    font-family: 'Anton', sans-serif;
     
 }
 
@@ -27,12 +23,44 @@
     color: white
 }
 
-.About {
-    display:flex;
-    margin: 3%;
+
+#text:hover {
+    transform:scale(1.02);
+    background: darkgreen;
+    color: white;
 }
 
+.About {
+    display:flex;
+    margin:5%;
+    padding:1%;
+    margin-bottom:4rem;
+}
 
-#about-intro {
-    font-family: 'Roboto', sans-serif;
+.About-child{
+    flex:1;
+}
+
+#title{
+    font-size:3rem;
+    padding-bottom: 1rem;
+}
+
+#protest{
+    width:120%;
+    padding-left: 3rem;
+}
+
+#about-intro{
+    text-align: left;
+    text-size:22px;
+}
+
+#about-two{
+    padding-left: 8rem;
+    padding-right:2rem;
+}
+
+p{
+    margin-bottom:30px;
 }
