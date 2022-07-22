@@ -94,7 +94,8 @@ function About() {
           {/* Many of our grandmothers shared their stories pre-Roe, and it was a life full of unnecessary and cruel pain. */}
           In hopes of being of service during this unexpected and dangerous interuption in women's rights, 
           we -- Martin & I -- decided to create a resource for people seeking abortion care. <br /></p>
-        <p id="about-intro">Our interactive map below shows you which states are protecting access to abortion services, which states are restricting access, and which states are banning them, according to The New York Times' IG posts. </p>
+        <p id="about-intro">Our interactive map below shows you which states are protecting access to abortion services according to The New York Times' IG posts. Once you click on Illinois, you'll be able to see some clinics that are open and servicing people.
+        For now, Illinois is the only state with clinic data. We're working on partnering with more national organizations to help us expand. </p>
         </div>
       
       </div>
