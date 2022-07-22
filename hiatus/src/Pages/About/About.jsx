@@ -35,21 +35,7 @@ function About() {
         <h3><span>Information is Power <br />
           Stay informed during <br/>
           this Hiatus</span></h3>
-          <a href="#Map"><span id="text">Map</span></a>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://i.imgur.com/uX8s3yb.png"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-        <h3><span>Our Stories Matter <br />
-          Feel Empowered to <br/>
-          Share Your Story</span></h3>
-          <a href="#Stories"><span id="text">Stories</span></a>
+          <a href="#map"><span id="text">Map</span></a>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -64,6 +50,20 @@ function About() {
           Check out resources <br/>
           available to you</span></h3>
           <a href="#Resources"><span id="text">Resource Hub</span></a>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://i.imgur.com/uX8s3yb.png"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+        <h3><span>Our Stories Matter <br />
+          Feel Empowered to <br/>
+          Share Your Story</span></h3>
+          <a href="#Stories"><span id="text">Stories</span></a>
         </Carousel.Caption>
       </Carousel.Item>
 

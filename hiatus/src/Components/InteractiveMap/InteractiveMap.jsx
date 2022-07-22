@@ -12,7 +12,7 @@ const rawHTML =
 </head>
 <body>
 <h1>Access to Abortion by State</h1>
-<p>Hover over each state to see where abortion care is accessible legally and safely.</p>
+<p>Hover over each state to see where abortion care is accessible legally and safely. <br />Click on a state to learn more about their policies regarding abortion care.</p>
 <div id="map"></div>
 </body>`
 

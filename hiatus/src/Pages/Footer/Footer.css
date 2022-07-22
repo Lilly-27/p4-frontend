@@ -1,3 +1,33 @@
-#Footer{
-    margin-top: 2rem;
+#Footer {
+    background-color: rgb(202, 232, 202);
+    padding: 2rem;
+}
+
+#img-dev {
+    border-radius: 90%;
+    width:6%;
+}
+
+#linkedin-icon{
+    border-radius: 30%;
+    width:2%;
+}
+
+#github {
+    border-radius: 30%;
+    width:2%;
+}
+
+.footer-container{
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+#dev{
+    display:inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
 }
