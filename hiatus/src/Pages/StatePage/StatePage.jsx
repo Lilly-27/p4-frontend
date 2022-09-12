@@ -11,14 +11,16 @@ import AccordionHeader from 'react-bootstrap/esm/AccordionHeader'
 import AccordionBody from 'react-bootstrap/esm/AccordionBody'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import useCenterFilter from '../../Hooks/useCenterFilter'
 
 const StatePage = () => {
 
-    const statename = useParams() 
-    console.log(statename)
+    const statename = useParams()
 
     const [stateData, setStateData] = useState([])
     const [clinicData, setClinicData] = useState([])
+    const center = useCenterFilter(statename)
+
     const fetchAll = () => {
         const stateURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}statepolicy/${statename.stateName}`
         const clinicURL = `${process.env.REACT_APP_API_ENDPOINT_PROD}clinics/state/${statename.stateName}`
@@ -37,6 +39,7 @@ const StatePage = () => {
     useEffect(() => {
         fetchAll()
     },[])
+    
   return (
         <div className="state-page-main-container">
             <div className="text-container">
@@ -101,7 +104,7 @@ const StatePage = () => {
                 )}
             </div>
             <div className="component-container">
-                {clinicData && <MapWrapper stateName={statename} clinicData={clinicData}></MapWrapper>}
+                {clinicData && <MapWrapper center={center} clinicData={clinicData}></MapWrapper>}
                 {/* TODO list of clinics */}
                 {/* list of organizations */}
             </div>
