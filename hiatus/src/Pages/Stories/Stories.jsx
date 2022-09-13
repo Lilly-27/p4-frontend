@@ -12,7 +12,6 @@ function Stories() {
 
   const handleButton = (e) => {
     e.preventDefault();
-    // console.log(e.target.dataset.key)
     const selectedNumber= Number(e.target.dataset.key)
     setSelected(selectedNumber)
   }
@@ -22,7 +21,6 @@ function Stories() {
     fetch(storyURL)
     .then((res) => res.json())
     .then((data)=>{
-      console.log(data)
       return setStoryData(data)
     })
     .catch(console.error)

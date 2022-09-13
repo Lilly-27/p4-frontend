@@ -9,14 +9,6 @@ import markerIcon  from '../../assets/welfareroom.png'
 
 const MapWrapper = ({ center, clinicData }) => {
   let navigate = useNavigate()
-  
-  //Must pass center and zoom data into component from rest call
-  const stateMapData = {
-    Illinois: {
-      state_center: {lat: 40.0000000, lng: -89.0000000},
-      zoom: 7.46
-    }
-  }
 
   const latLongs = clinicData.map((clinic) => {
     return {
