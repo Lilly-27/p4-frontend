@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useNavigate} from 'react-router-dom';
 import {
     GoogleMap,
@@ -9,6 +9,7 @@ import markerIcon  from '../../assets/welfareroom.png'
 
 const MapWrapper = ({ center, clinicData }) => {
   let navigate = useNavigate()
+
 
   const latLongs = clinicData.map((clinic) => {
     return {
