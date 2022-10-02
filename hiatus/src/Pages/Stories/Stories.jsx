@@ -48,8 +48,8 @@ function Stories() {
       {storyData
       ? storyData.map((story, index) => {
           return(
-            <Col id="columns">
-              <Card id="card" key={index}>
+            <Col id="columns" key={index}>
+              <Card id="card">
                 <Card.Body>
                   <Card.Title>{story.title}</Card.Title>
                   {selected === index
