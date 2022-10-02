@@ -6,15 +6,7 @@ import {Parser} from 'html-to-react'
 // var map = { __html: __html };
 
 const rawHTML =
-`<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-</head>
-<body>
-<h1>Access to Abortion by State</h1>
-<p>Hover over each state to see where abortion care is accessible legally and safely. <br />Click on a state to learn more about their policies regarding abortion care.</p>
-<div id="map"></div>
-</body>`
+`<div id="map"></div>`
 
 function InteractiveMap() {
   let navigate = useNavigate()
