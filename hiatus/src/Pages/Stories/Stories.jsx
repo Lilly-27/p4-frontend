@@ -35,11 +35,15 @@ function Stories() {
       <Card id="banner">
       <Card.Img src="https://i.imgur.com/DJnLxtx.png" alt="women supporting women" />
       <Card.ImgOverlay>
-        <Card.Text className="caption">
-          <h3>Our Stories Matter</h3><br />
-          <h4>Our hope is for you to read these stories and <br />
-        feel comforted by the fact that you are not alone.</h4>
+        <Card.Body className='caption'>
+        <Card.Header as='h3'>
+          Our Stories Matter
+        </Card.Header>
+        <Card.Text as='h4'>
+        Our hope is for you to read these stories and <br />
+        feel comforted by the fact that you are not alone.
         </Card.Text>
+        </Card.Body>
       </Card.ImgOverlay>
     </Card>
    
