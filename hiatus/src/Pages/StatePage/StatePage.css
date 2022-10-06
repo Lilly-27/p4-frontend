@@ -11,4 +11,5 @@ background: teal;
     height: 80vh;
     margin: 16px;
     padding: 12px;
+    gap: 32px;
 }
