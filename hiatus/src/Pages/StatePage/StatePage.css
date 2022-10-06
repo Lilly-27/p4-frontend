@@ -3,7 +3,7 @@ background: teal;
 } */
 
 .state-page-main-container{
-    background-color: aquamarine;
+    background-color: rgba(69, 214, 166, 0.3);
     display: grid;
     grid-template-columns: 55% 45%;
     margin-left: 2rem;
