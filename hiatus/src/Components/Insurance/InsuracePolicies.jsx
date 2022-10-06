@@ -99,7 +99,7 @@ const InsuracePolicies = ({insurance}) => {
           policies
           ?
           <>
-          <p><b>Please note that this is just an informational services. For acurate coverage please call your provider and clinic</b></p>
+          <p><b>Please note that this is just an informational service and only shows what laws are aplicable for each state.</b></p>
           <h3>Private Coverage</h3>
           <p>{policies.requiresCoverage}</p>
           <p>{policies.privateCoverageNoRestriction}</p>

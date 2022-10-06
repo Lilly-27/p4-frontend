@@ -32,7 +32,7 @@ const MapWrapper = ({ center, clinicData }) => {
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-        <GoogleMap mapContainerClassName='map-class' zoom={7.46} center={center} mapContainerStyle={mapStyles}>
+        <GoogleMap mapContainerClassName='map-class' zoom={7.46} center={center} mapContainerStyle={mapStyles} streetView='false'>
           {latLongs.map((item, key) => {
           return (
             <Marker
