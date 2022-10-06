@@ -53,8 +53,8 @@ const StatePage = () => {
                     due to the number of lines however for now we will work in here
                 */}
                         <Accordion defaultActiveKey="0">
-                            <AccordionItem eventKey="0">
-                                <AccordionHeader><h3>Gestational Limits</h3></AccordionHeader>
+                            <AccordionItem eventKey="0" id='gestational-limits'>
+                                <AccordionHeader className='accordian-header'><h3>Gestational Limits</h3></AccordionHeader>
                                 <AccordionBody>
                                     {stateData["gestational_limits"] ? (
                                         <GestationalLimits
@@ -69,8 +69,8 @@ const StatePage = () => {
                                     )}
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem eventKey="1">
-                                <AccordionHeader><h3>Waiting Period</h3></AccordionHeader>
+                            <AccordionItem eventKey="1" id='waiting-periods'>
+                                <AccordionHeader className='accordian-header'><h3>Waiting Period</h3></AccordionHeader>
                                 <AccordionBody>
                                 {stateData.waiting_periods ? (
                             <WaitingPeriod waiting={stateData.waiting_periods} />
@@ -79,16 +79,16 @@ const StatePage = () => {
                         )}
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem eventKey="2">
-                                <AccordionHeader><h3>Laws Pertaining To Minors</h3></AccordionHeader>
+                            <AccordionItem eventKey="2" id='laws-pertaining-to-minors'>
+                                <AccordionHeader className='accordian-header'><h3>Laws Pertaining To Minors</h3></AccordionHeader>
                                 <AccordionBody>{stateData["minors"] ? (
                             <LawsForMinors laws={stateData.minors} />
                         ) : (
                             <p>No information on laws or policies pertaining to minors</p>
                         )}</AccordionBody>
                             </AccordionItem>
-                            <AccordionItem eventKey="3">
-                                <AccordionHeader><h3>Insurance Coverage</h3></AccordionHeader>
+                            <AccordionItem eventKey="3" id='insurance-coverage'>
+                                <AccordionHeader className='accordian-header'><h3>Insurance Coverage</h3></AccordionHeader>
                                 <AccordionBody>
                                 {stateData["insurance_coverage"] ? (
                             <InsuracePolicies insurance={stateData.insurance_coverage} />

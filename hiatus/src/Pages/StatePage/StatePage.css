@@ -5,11 +5,16 @@ background: teal;
 .state-page-main-container{
     background-color: rgba(69, 214, 166, 0.3);
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 3fr 2fr;
     margin-left: 2rem;
     margin-right: 2rem;
     height: 80vh;
     margin: 16px;
     padding: 12px;
     gap: 32px;
+}
+
+.component-container{
+    border-radius: 30px;
+    border: 1px solid black;
 }

@@ -27,6 +27,7 @@ const MapWrapper = ({ center, clinicData }) => {
   const mapStyles = {
     height: '100%',
     width: '100%',
+    borderRadius: '30px',
   }
 
   return (

@@ -12,6 +12,9 @@ body {
       monospace;
   }
   
+.map-class{
+  border-radius: 30px;
+}
 
 .mapContainer {
     margin-top: 25px;
