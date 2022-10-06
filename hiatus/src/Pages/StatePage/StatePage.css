@@ -14,10 +14,9 @@ background: teal;
     gap: 32px;
 }
 
-.component-container{
+/* .component-container{
     border-radius: 30px;
-    border: 1px solid black;
-}
+} */
 
 .accordion-header button{
     background-color: rgba(48, 149, 116, 0.45);
