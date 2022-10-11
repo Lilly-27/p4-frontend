@@ -15,6 +15,13 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path='/' element={<LandingPage/>}></Route>
+        <Route exact path='/#about' element={<LandingPage/>}></Route>
+        <Route exact path='/#map' element={<LandingPage/>}></Route>
+        <Route exact path='/#resources' element={<LandingPage/>}></Route>
+        <Route exact path='/#stories' element={<LandingPage/>}></Route>
+        <Route exact path='/#donate' element={<LandingPage/>}></Route>
+
+
 
         {/* account related routes */}
         <Route exact path='/login' element={<LogIn/>}></Route>
