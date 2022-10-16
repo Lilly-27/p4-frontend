@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar className='app-nav-bar'/>
       <Routes>
         <Route exact path='/' element={<LandingPage/>}></Route>
 
