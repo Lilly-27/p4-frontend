@@ -11,7 +11,6 @@ const Clinics = () => {
 
   const fetchClinic = () => {
     axios.get(`${process.env.REACT_APP_API_ENDPOINT_PROD}clinics/id/${clinicID}`)
-    // .then((res) => console.log(res))
     .then((res) => setClinicData(res.data))
     .catch(console.error)
   }
@@ -53,10 +52,7 @@ const Clinics = () => {
               <li>Sunday: {clinicData.hours.Sunday}</li>
             </ul>
           </div>
-          <div className='clinic-contact-container'>
-            <h2>Contacts</h2>
-            <p>Phone Number: {clinicData.phone}</p>
-            
+          <div className='clinic-contact-container'>   
             <Button><a href={clinicData.website}>Link to there site</a></Button>
           </div>
         </div>
