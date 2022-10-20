@@ -1,4 +1,5 @@
 import React from 'react';
+import SvgMap from './SvgMap';
 import { useNavigate} from 'react-router-dom';
 import {Parser} from 'html-to-react'
 
@@ -16,9 +17,10 @@ function InteractiveMap() {
     navigate(`/states/${window.stateNext}`)
   }
   return (
-     <div id="map" onClick={onClick}> 
-     {Parser().parse(rawHTML)}
-     </div>
+    //  <div id="map" onClick={onClick}> 
+    //  {Parser().parse(rawHTML)}
+    //  </div>
+     <SvgMap/>
   )      
 }
 
