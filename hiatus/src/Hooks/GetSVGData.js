@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-const axios = require('axios')
-
 
 const GetSVGData =  () => {
     //process.env is undefined not really sure why I even install dotenv
@@ -19,7 +17,10 @@ const GetSVGData =  () => {
         })
         .catch(console.error)
     },[])
-    return res;
+    
+    if(res !== null){
+        return res
+    }
     
 }   
 
