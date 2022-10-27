@@ -1,24 +1,28 @@
-import React from 'react';
-import { useNavigate} from 'react-router-dom';
-import {Parser} from 'html-to-react'
+import React, { useEffect, useState } from 'react';
+import SvgMap from './SvgMap';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-// var map = require('./test.html');
-// var map = { __html: __html };
-
-const rawHTML =
-`<div id="map"></div>`
+const svgString = process.env.NODE_ENV === 'production'
+? process.env.REACT_APP_PROG_SVG
+: 'http://localhost:4000/svg/getSVGs'
 
 function InteractiveMap() {
-  let navigate = useNavigate()
+  // let navigate = useNavigate()
+  const [svgData, setSvgData] = useState()
   
-  function onClick (e) {
-    e.preventDefault()    
-    navigate(`/states/${window.stateNext}`)
+  const getSVG = (url) => {
+    axios.get(svgString)
+    .then((res) => setSvgData(res.data))
+    .catch((err) => console.error)
   }
+
+  useEffect(() => {
+    getSVG()
+  },[])
+ 
   return (
-     <div id="map" onClick={onClick}> 
-     {Parser().parse(rawHTML)}
-     </div>
+     <SvgMap svgData={svgData}/>
   )      
 }
 
