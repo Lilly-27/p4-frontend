@@ -37,9 +37,10 @@ const SvgMap = ({svgData}) => {
       <Geographies geography={geoURL}>
         {({geographies}) =>
           geographies.map((geo, i) => {
-            const fill = findFill(geo.properties.name)
+            const stateName = geo.properties.name
+            const fill = findFill(stateName)
 
-            return <Geography key={geo.rsmKey} geography={geo} fill={fill} stroke='#ffffff' onClick={clicked} data-name={geo.properties.name}/> 
+            return <Geography key={geo.rsmKey} geography={geo} fill={fill} stroke='#ffffff' onClick={clicked} data-name={stateName}/> 
         })
       
         }
