@@ -9,7 +9,7 @@ const svgString = process.env.NODE_ENV === 'production'
 : 'http://localhost:4000/svg/getSVGs'
 
 const geoURL = 'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/united-states/us-albers.json'
-const width = 1100
+const width = 1300
 
 const SvgMap = ({svgData}) => {
   const navigate = useNavigate()
