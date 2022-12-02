@@ -90,10 +90,10 @@ function About() {
 
         <div id="about-two">
         <h2 id="title">About Hiatus</h2>
-        <p id="about-intro">After SCOTUS overturned Roe v. Wade on June 24, 2022, we knew people with power would do their best to obscure information on abortion services.
+        <p id="about-intro">After SCOTUS overturned Roe v. Wade on June 24, 2022, we knew people with power would do their best to obscure information on abortion services.&nbsp; 
           {/* Many of our grandmothers shared their stories pre-Roe, and it was a life full of unnecessary and cruel pain. */}
           In hopes of being of service during this unexpected and dangerous interuption in women's rights, 
-          we -- Martin & I -- decided to create a resource for people seeking abortion care. <br /></p>
+          we at Hiatus decided to create a resource for people seeking abortion care. <br /></p>
         <p id="about-intro">Our interactive map below shows you which states are protecting access to abortion services according to The New York Times' IG posts. Once you click on Illinois, you'll be able to see some clinics that are open and servicing people.
         For now, Illinois is the only state with clinic data. We're working on partnering with more national organizations to help us expand. </p>
         </div>
