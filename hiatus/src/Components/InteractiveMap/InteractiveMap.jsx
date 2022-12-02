@@ -14,7 +14,7 @@ function InteractiveMap() {
   const getSVG = (url) => {
     axios.get(svgString)
     .then((res) => setSvgData(res.data))
-    .catch((err) => console.error)
+    .catch((err) => console.error(err))
   }
 
   useEffect(() => {

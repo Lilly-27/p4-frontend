@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ComposableMap, Geographies, Geography} from 'react-simple-maps';
-import axios from 'axios'; 
-import getSVGs from '../../Hooks/GetSVGData';
+import { ComposableMap, Geographies, Geography, Annotation} from 'react-simple-maps';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,15 +12,19 @@ const geoURL = 'https://raw.githubusercontent.com/deldersveld/topojson/master/co
 const width = 1100
 
 const SvgMap = ({svgData}) => {
+  const navigate = useNavigate()
 
   const findFill = (stateName) => {
     for(let i = 0; i < svgData.length; i++){
       if(stateName === svgData[i].state){
-        console.log(svgData[i].fill)
         return svgData[i].fill
       }
     }
+  }
 
+  const clicked = (e) => {
+    e.preventDefault()
+    navigate(`/states/${e.target.dataset.name}`)
   }
 
   return (
@@ -34,9 +37,10 @@ const SvgMap = ({svgData}) => {
       <Geographies geography={geoURL}>
         {({geographies}) =>
           geographies.map((geo, i) => {
-            const fill = findFill(geo.properties.name)
+            const stateName = geo.properties.name
+            const fill = findFill(stateName)
 
-            return <Geography key={geo.rsmKey} geography={geo} fill={fill} stroke='#ffffff'/> 
+            return <Geography key={geo.rsmKey} geography={geo} fill={fill} stroke='#ffffff' onClick={clicked} data-name={stateName}/> 
         })
       
         }
