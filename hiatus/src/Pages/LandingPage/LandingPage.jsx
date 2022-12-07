@@ -15,9 +15,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     const index = loc.match(/(#)([A-Z | a-z]+)/)
-    setTimeout(() => {
-      document.querySelector(index[0]).scrollIntoView({behavior: 'smooth', block: 'start'})
-    },1000)
+    document.querySelector(index[0]).scrollIntoView(true, {behavior: 'smooth', block: 'end'})
   }, [loc])
 
   return (
