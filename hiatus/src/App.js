@@ -8,6 +8,7 @@ import StatePage from './Pages/StatePage/StatePage';
 import NavBar from './Pages/NavBar/NavBar';
 import Footer from './Pages/Footer/Footer';
 import './App.css';
+import Stories from './Pages/Stories/Stories';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path='/' element={<LandingPage/>}></Route>
+        <Route exact path='/#Stories' element={<Stories/>}></Route>
 
         {/* account related routes */}
         <Route exact path='/login' element={<LogIn/>}></Route>
